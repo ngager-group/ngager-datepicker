@@ -15,12 +15,18 @@ npm install --save ngager-datepicker
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'ngager-datepicker'
+import NgagerDateField from 'ngager-datepicker'
 
 class Example extends Component {
   render () {
     return (
-      <MyComponent />
+      <NgagerDateField
+        initialValue={this.state.fromDate}
+        minDate={this.props.minDate}
+        maxDate={this.props.maxDate}
+        placeholder="From date"
+        onChange={fromDate => this.setState({ fromDate })}
+      />
     )
   }
 }
@@ -28,4 +34,4 @@ class Example extends Component {
 
 ## License
 
-MIT © [Ngager](https://github.com/Ngager)
+MIT © [Ngager](https://github.com/ngager-group)
